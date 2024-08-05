@@ -45,10 +45,16 @@ Note: The if you are using Docker, the last two steps can be done like so:
 
 Setup the Tables:
 
-    docker cp create_tables.sql postgres-demo:/create_tables.sql
+[//]: # (   Standard approach)
+[//]: # (    docker cp create_tables.sql postgres-demo:/create_tables.sql) 
+[//]: # ( Current local directory/source path)
+[//]: # (docker cp C:\Users\jaVil\IdeaProjects\ps-first-spring-boot-app\database\postgresql\create_tables.sql postgres-demo:/create_tables.sql)
     docker exec -it postgres-demo psql -d conference_app -f create_tables.sql -U postgres
 
 Install the Data:
+[//]: # (   Standard approach)
+[//]: # (    docker cp insert_data.sql postgres-demo:/insert_data.sql)
+[//]: # ( Current local directory/source path)
+[//]: # (docker cp C:\Users\jaVil\IdeaProjects\ps-first-spring-boot-app\database\postgresql\insert_data.sql postgres-demo:/insert_data.sql)
 
-    docker cp insert_data.sql postgres-demo:/insert_data.sql
     docker exec -it postgres-demo psql -d conference_app -f insert_data.sql -U postgres
